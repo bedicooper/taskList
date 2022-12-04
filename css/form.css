@@ -1,12 +1,21 @@
 .form {
-    padding: 20px;
+    padding: 10px;
 
+}
+
+.form__field{
+    color: #999;
+    font-weight: 300;
+    padding: 8px; 
+    border: 1px solid #eee;
+    margin: 10px;
 }
 
 .form__submitButton {
     background-color: #007383;
     color: #fff;
     font-weight: 300;
-    border: none;
+    border: 1px solid #007383;
     padding: 8px;
+    margin: 10px;
 }

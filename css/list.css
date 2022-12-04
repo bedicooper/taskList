@@ -1,0 +1,36 @@
+.list__item {
+    border-bottom: 2px solid #eee;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__content{
+    display: inline-block;
+    flex-basis: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+.list__button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-image: url(/img/large-green-square_1f7e9.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    padding: 10px;
+}
+
+.list__button--done {
+    background-image: url(/img/check-mark-button_2705.png);
+}
+
+.list__button--delete {
+    background-image: url(/img/cross-mark_274c.png);
+}
