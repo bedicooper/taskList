@@ -1,0 +1,12 @@
+.form {
+    padding: 20px;
+
+}
+
+.form__submitButton {
+    background-color: #007383;
+    color: #fff;
+    font-weight: 300;
+    border: none;
+    padding: 8px;
+}
