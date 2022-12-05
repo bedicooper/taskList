@@ -5,7 +5,6 @@
 
 .list__item {
     border-bottom: 2px solid #eee;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;

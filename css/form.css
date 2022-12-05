@@ -3,12 +3,30 @@
 
 }
 
+.form__container{
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 767px) {
+    .form__container{
+        flex-wrap: wrap;
+    }
+}
+
 .form__field{
-    color: #999;
-    font-weight: 300;
     padding: 8px; 
-    border: 1px solid #eee;
+    border: 1px solid #d4d4d4;
     margin: 10px;
+    flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+    .form__field{
+        flex-basis: 100%;
+    }
 }
 
 .form__submitButton {
@@ -18,4 +36,10 @@
     border: 1px solid #007383;
     padding: 8px;
     margin: 10px;
+}
+
+@media (max-width: 767px) {
+    .form__submitButton{
+        flex-basis: 100%;
+    }
 }
