@@ -7,7 +7,7 @@
             content: newTaskContent,
             done: false,
         });
-
+        document.querySelector(".js-newTask").value = "";
         render();
     };
 
