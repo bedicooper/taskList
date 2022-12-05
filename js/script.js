@@ -8,6 +8,7 @@
             done: false,
         });
         document.querySelector(".js-newTask").value = "";
+        document.querySelector(".js-newTask").focus();
         render();
     };
 
@@ -59,8 +60,9 @@
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
         if (newTaskContent === "") {
-            return;
+            return document.querySelector(".js-newTask").focus();
         }
+
         addNewTask(newTaskContent);
     };
 
