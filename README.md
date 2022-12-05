@@ -15,5 +15,5 @@ In this project I'm using *javascript* and *flex*.
 My task list is build on a simple form with one input and a submit button.
 List of records apears beneth the form, each record with two buttons, one to mark task as done and one to delete the task form the list.
 
-![screenshot of the website showing task list with three items below an input form. Second item on the list is marked as done, its text stroke through](https://raw.githubusercontent.com/bedicooper/taskList/main/img/websiteScreenshot.jpg)
+![screenshot of the website showing task list with three items below an input form. Second item on the list is marked as done, its text stroke through](https://raw.githubusercontent.com/bedicooper/taskList/main/img/websiteScreenshot.JPG)
 
