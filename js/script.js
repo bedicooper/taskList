@@ -7,8 +7,7 @@
             content: newTaskContent,
             done: false,
         });
-        document.querySelector(".js-newTask").value = "";
-        document.querySelector(".js-newTask").focus();
+
         render();
     };
 
@@ -57,13 +56,14 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        const newTaskElement = document.querySelector(".js-newTask")
+        const newTaskContent = newTaskElement.value.trim();
+        newTaskElement.focus();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        if (newTaskContent === "") {
-            return document.querySelector(".js-newTask").focus();
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskElement.value = "";
         }
-
-        addNewTask(newTaskContent);
     };
 
     const init = () => {
