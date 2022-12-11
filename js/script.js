@@ -14,7 +14,6 @@
     };
 
     const toggleTaskDone = (taskIndex) => {
-        // tasks[taskIndex].done = !tasks[taskIndex].done;
         tasks = [
             ...tasks.slice(0, taskIndex),
             {
@@ -22,7 +21,7 @@
             },
             ...tasks.slice(taskIndex + 1)
         ];
-  
+
         render();
     };
 
@@ -34,14 +33,16 @@
         render();
     }
 
-    const bindEvents = () => {
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
             });
         });
+    };
 
+    const bindDeleteEvents = () => {
         const deleteButtons = document.querySelectorAll(".js-delete");
         deleteButtons.forEach((deleteButton, index) => {
             deleteButton.addEventListener("click", () => {
@@ -50,21 +51,38 @@
         });
     };
 
-    const render = () => {
-        let htmlString = "";
+    const renderTasksList = () => {
+        let taskListHtml = "";
 
         for (const task of tasks) {
-            htmlString += `
-        <div class="list__item${task.done ? " list__item--done" : ""}">
-        <button class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
-        <span class="list__content">${task.content}</span>
-        <button class="js-delete list__button list__button--delete"></button>
-        </div>
-        `;
+            taskListHtml += `
+    <div class="list__item${task.done ? " list__item--done" : ""}">
+    <button class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
+    <span class="list__content">${task.content}</span>
+    <button class="js-delete list__button list__button--delete"></button>
+    </div>
+    `;
         }
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = taskListHtml;
+    };
 
-        bindEvents();
+const renderListEditButtons = () => {
+    let listButtonsHtml = "";
+if (tasks.length !== 0) {
+    listButtonsHtml += `
+    <button class="js-hideAllDone">Ukryj ukończone</button>
+    <button class="js-toggleAllDone">Ukończ wszystkie</button>
+    `;
+}
+    document.querySelector(".js-listEditButtons").innerHTML = listButtonsHtml;
+};
+
+    const render = () => {
+        renderTasksList();
+        renderListEditButtons();
+
+        bindToggleDoneEvents();
+        bindDeleteEvents();
     };
 
     const onFormSubmit = (event) => {
