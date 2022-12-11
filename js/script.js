@@ -86,7 +86,7 @@
         if (tasks.length !== 0) {
             listEditButtonsHtml += `
     <button class="js-hideAllDone">Ukryj ukończone</button>
-    <button class="js-markAllDone">Ukończ wszystkie</button>
+    <button class="js-markAllDone"${tasks.every(({done}) => done) ? " disabled" : ""}>Ukończ wszystkie</button>
     `;
         }
         document.querySelector(".js-listEditButtons").innerHTML = listEditButtonsHtml;
