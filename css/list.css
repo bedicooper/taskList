@@ -25,6 +25,7 @@
     width: 20px;
     height: 20px;
     border: none;
+    background-color: #fff;
     background-image: url(https://raw.githubusercontent.com/bedicooper/taskList/main/img/large-green-square_1f7e9.png);
     background-position: 50% 50%;
     background-size: cover;
@@ -36,6 +37,5 @@
 }
 
 .list__button--delete {
-    background-color: #fff;
-    background-image: url(https://raw.githubusercontent.com/bedicooper/taskList/main/img/cross-mark_274c.png);
+    background-image: url(https://raw.githubusercontent.com/bedicooper/taskList/main/img/wastebasket-red-square_1f7e5.png);
 }

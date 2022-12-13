@@ -33,7 +33,7 @@
         render();
     }
 
-    const markAllTaskAsDone = () => {
+    const markAllTasksAsDone = () => {
         tasks = tasks.map((item) => ({ ...item, done: true, }));
         render();
     };
@@ -61,7 +61,7 @@
 
         if (tasks.length !== 0) {
             markAllDoneButton.addEventListener("click", () => {
-                markAllTaskAsDone();
+                markAllTasksAsDone();
             });
         };
     };
@@ -72,9 +72,9 @@
         for (const task of tasks) {
             taskListHtml += `
     <div class="list__item${task.done ? " list__item--done" : ""}">
-    <button class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
+    <button title="toggle done" class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
     <span class="list__content">${task.content}</span>
-    <button class="js-delete list__button list__button--delete"></button>
+    <button title="delete task" class="js-delete list__button list__button--delete"></button>
     </div>
     `;
         }

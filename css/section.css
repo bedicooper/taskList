@@ -5,6 +5,13 @@
 
 .section__header {
     padding: 20px;
-    border-bottom: 2px solid #eee;
     margin: 0px;
+}
+
+.section__container{
+ display: flex;   
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ border-bottom: 2px solid #eee;
 }
