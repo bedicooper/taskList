@@ -80,11 +80,11 @@
 
         for (const task of tasks) {
             taskListHtml += `
-    <div class="list__item${task.done & doneTasksHidden ? " list__item--hidden list__item--done" : task.done ? " list__item--done" : ""}">
+    <li class="list__item${task.done & doneTasksHidden ? " list__item--hidden list__item--done" : task.done ? " list__item--done" : ""}">
     <button title="toggle done" class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
     <span class="list__content">${task.content}</span>
     <button title="delete task" class="js-delete list__button list__button--delete"></button>
-    </div>
+    </li>
     `;
         }
         document.querySelector(".js-tasks").innerHTML = taskListHtml;
