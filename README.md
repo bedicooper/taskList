@@ -15,5 +15,8 @@ In this project I'm using *javascript* and *flex*.
 My task list is built on a simple form with one input and a submit button.
 List of records apears beneth the form, each record with two buttons, one to mark task as done and one to delete the task form the list.
 
+### What's new?
+I've added two buttons, one to mark all tasks done and the other to hide all done task. Both buttons apear only if list is not empty. 
+
 ![screenshot of the website showing task list with three items below an input form. Second item on the list is marked as done, its text stroke through](https://raw.githubusercontent.com/bedicooper/taskList/main/img/websiteScreenshot.JPG)
 
