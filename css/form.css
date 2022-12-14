@@ -5,12 +5,6 @@
     flex-wrap: nowrap;
 }
 
-/* .form__container{
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: nowrap;
-} */
-
 @media (max-width: 767px) {
     .form {
         flex-wrap: wrap;
@@ -37,7 +31,6 @@
     border: 1px solid #007383;
     padding: 8px;
     margin: 10px;
-
 }
 
 .form__submitButton:hover {
