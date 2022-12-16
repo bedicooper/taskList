@@ -35,11 +35,11 @@
     background-color: #ffffff;
     border: none;
     color: #007383;
+    transition: color 250ms ease-in-out;
 }
 
 .list__editButton:hover {
     color: hsl(187, 100%, 35%);
-    transition: color 250ms ease-in-out;
 }
 
 .list__editButton:disabled {
