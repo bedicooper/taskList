@@ -94,8 +94,8 @@
         let listEditButtonsHtml = "";
         if (tasks.length !== 0) {
             listEditButtonsHtml += `
-                <button class="list__editButton js-hideAllDone">${doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-                <button class="list__editButton js-markAllDone"${tasks.every(({ done }) => done) ? " disabled" : ""}>Ukończ wszystkie</button>
+                <button class="buttons_listEditButtons js-hideAllDone">${doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+                <button class="buttons_listEditButtons js-markAllDone"${tasks.every(({ done }) => done) ? " disabled" : ""}>Ukończ wszystkie</button>
             `;
         }
         document.querySelector(".js-listEditButtons").innerHTML = listEditButtonsHtml;

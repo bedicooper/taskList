@@ -1,27 +1,18 @@
 .form {
-    padding: 10px;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
 }
 
 @media (max-width: 767px) {
     .form {
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
     }
 }
 
 .form__field{
     padding: 8px; 
     border: 1px solid #d4d4d4;
-    margin: 10px;
-    flex-grow: 1;
-}
-
-@media (max-width: 767px) {
-    .form__field{
-        flex-basis: 100%;
-    }
 }
 
 .form__submitButton {
@@ -30,8 +21,7 @@
     font-weight: 300;
     border: 1px solid #007383;
     padding: 8px;
-    margin: 10px;
-    transition: transform 500ms ease-in-out, background-color 250ms ease-in-out;
+    transition: 500ms ease-in-out;
 }
 
 .form__submitButton:hover {
@@ -40,12 +30,12 @@
 }
 
 @media (max-width: 767px) {
-    .form__submitButton{
-        flex-basis: 100%;
-    }
-}
-@media (max-width: 767px) {
     .form__submitButton:hover{
         transform: scale(1.04);
     }
+}
+
+.form__submitButton:active {
+    background-color: hsl(187, 100%, 35%);
+    transform: scale(1.1);
 }

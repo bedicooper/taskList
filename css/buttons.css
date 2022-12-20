@@ -1,0 +1,28 @@
+.buttons__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.buttons_listEditButtons {
+    margin: 0 0 0 20px;
+    background-color: transparent;
+    border: none;
+    color: #007383;
+    transition: color 250ms ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .buttons_listEditButtons {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.buttons_listEditButtons:hover {
+    color: hsl(187, 100%, 35%);
+}
+
+.buttons_listEditButtons:disabled {
+    color: #bbb;
+}

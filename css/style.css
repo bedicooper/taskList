@@ -12,15 +12,4 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #eee;
-    padding: 20px;
-}
-
-.main {
-    margin: auto;
-    max-width: 1200px;
-    min-width: 280px;
-}
-
-.header {
-    font-weight: 700;
 }

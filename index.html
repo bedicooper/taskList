@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task List by Mateusz Bednarz</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/bedicooper/taskList/main/img/taskList-192.png"
-    <meta property="og:image" content="https://raw.githubusercontent.com/bedicooper/taskList/main/img/share.png">
+    <link rel="icon" href="https://raw.githubusercontent.com/bedicooper/taskList/main/img/taskList-192.png" <meta
+        property="og:image" content="https://raw.githubusercontent.com/bedicooper/taskList/main/img/share.png">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/section.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/buttons.css">
 
     <script defer src="js/script.js"></script>
 
@@ -28,22 +30,28 @@
 <body>
 
     <main class="main">
-        <header class="header">
+        <header>
             <h1>Lista zadań</h1>
         </header>
         <section class="section">
-            <h2 class="section__header">Dodaj nowe zadanie</h2>
-            <form class="form js-form">
+            <header class="section__header">
+                <h2 class="section__title">Dodaj nowe zadanie</h2>
+            </header>
+            <div class="section__container">
+                <form class="form js-form">
                     <input class="form__field js-newTask" name="addTask" placeholder="Co jest do zrobienia?">
                     <button class="form__submitButton">Dodaj zadanie</button>
-            </form>
+                </form>
+            </div>
         </section>
         <section class="section">
+            <header class="section__header">
+                <h2 class="section__title">Lista zadań</h2>
+                <div class="js-listEditButtons buttons__container"></div>
+            </header>
             <div class="section__container">
-                <h2 class="section__header">Lista zadań</h2>
-                <div class="js-listEditButtons list__buttonContainer"></div>
+                <ul class="js-tasks list"></ul>
             </div>
-            <ul class="js-tasks list"></ul>
         </section>
     </main>
 

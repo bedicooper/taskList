@@ -10,7 +10,7 @@ https://bedicooper.github.io/taskList/
 
 ## Written in 
 
-In this project I'm using *javascript* and *flex*.
+In this project I'm using *javascript*, *grid* and *flex*.
 ## What's inside?
 My task list is built on a simple form with one input and a submit button.
 List of records apears beneth the form, each record with two buttons, one to mark task as done and one to delete the task form the list.
