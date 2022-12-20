@@ -38,8 +38,8 @@
         render();
     };
 
-    const hideAllDoneTasks = () => {
-        doneTasksHidden ? doneTasksHidden = false : doneTasksHidden = true;
+    const toggleHideAllDoneTasks = () => {
+        doneTasksHidden = !doneTasksHidden;
         render();
     };
 
@@ -70,7 +70,7 @@
                 markAllTasksAsDone();
             });
             hideAllDoneButton.addEventListener("click", () => {
-                hideAllDoneTasks();
+                toggleHideAllDoneTasks();
             });
         };
     };
@@ -80,12 +80,12 @@
 
         for (const task of tasks) {
             taskListHtml += `
-    <li class="list__item${task.done & doneTasksHidden ? " list__item--hidden list__item--done" : task.done ? " list__item--done" : ""}">
-    <button title="toggle done" class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
-    <span class="list__content">${task.content}</span>
-    <button title="delete task" class="js-delete list__button list__button--delete"></button>
-    </li>
-    `;
+                <li class="list__item${task.done & doneTasksHidden ? " list__item--hidden list__item--done" : task.done ? " list__item--done" : ""}">
+                    <button title="toggle done" class="js-done list__button${task.done ? " list__button--done" : ""}"></button>
+                    <span class="list__content">${task.content}</span>
+                    <button title="delete task" class="js-delete list__button list__button--delete"></button>
+                </li>
+            `;
         }
         document.querySelector(".js-tasks").innerHTML = taskListHtml;
     };
@@ -94,9 +94,9 @@
         let listEditButtonsHtml = "";
         if (tasks.length !== 0) {
             listEditButtonsHtml += `
-    <button class="list__editButton js-hideAllDone">${doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-    <button class="list__editButton js-markAllDone"${tasks.every(({ done }) => done) ? " disabled" : ""}>Ukończ wszystkie</button>
-    `;
+                <button class="list__editButton js-hideAllDone">${doneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+                <button class="list__editButton js-markAllDone"${tasks.every(({ done }) => done) ? " disabled" : ""}>Ukończ wszystkie</button>
+            `;
         }
         document.querySelector(".js-listEditButtons").innerHTML = listEditButtonsHtml;
     };
